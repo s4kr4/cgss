@@ -1,0 +1,57 @@
+// Place all the styles related to the list controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+table {
+	border-collapse: collapse;
+	border: 1px solid;
+}
+
+tr {
+	border-bottom: 1px solid;
+}
+
+tr.own {
+	background-color: #cfc;
+}
+
+th {
+	background-color: #ddd;
+}
+
+.col_number {
+	width: 50px;
+}
+
+.col_image {
+	width: 150px;
+}
+
+.col_name {
+	width: 500px;
+}
+
+.col_rarity {
+	width: 150px;
+}
+
+.col_attr {
+	width: 150px;
+}
+
+.col_own {
+	width: 150px;
+}
+
+.col_edit {
+	width: 150px;
+}
+
+.search {
+	width: 100%;
+}
+
+img {
+	max-height: 100px;
+}
+

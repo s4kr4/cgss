@@ -1,0 +1,14 @@
+<tr id="card_<%= card.id %>" <%= raw("class=\"own\"") if card.own == true %>>
+	<td class="col_number"><%= card.number %></td>
+	<td class="col_image"><img src="<%= card.image %>" /></td>
+	<td class="col_name"><%= card.name %></td>
+	<td class="col_rarity"><%= card.rarity %></td>
+	<td class="col_attr"><%= card.attr %></td>
+	<% if card.own == false %>
+	<td class="col_own"><%= link_to "[GET]", card_path(card.id), method: :patch, remote: true %></td>
+	<% else %>
+	<td class="col_own"><%= link_to "[DEL]", card_path(card.id), method: :patch, remote: true %></td>
+	<% end %>
+	<td class="col_edit"><%= link_to "[EDIT]", edit_card_path(card.id) %></td>
+</tr>
+
