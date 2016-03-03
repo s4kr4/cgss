@@ -2,10 +2,10 @@ class CardsController < ApplicationController
 
 	before_action :set_card, only: [:edit, :update, :destroy]
 
-  def index
+	def index
 #		@cards = Card.all
 		@cards = Card.order("number ASC")
-  end
+	end
 
 	def create
 		@card = Card.new(card_params)

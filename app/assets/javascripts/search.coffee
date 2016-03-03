@@ -9,8 +9,6 @@ $ ->
 					$('.col_number:contains(' + this.value + ')').parent().show()
 				when "card_name"
 					$('.col_name:contains(' + this.value + ')').parent().show()
-				when "card_rarity"
-					$('.col_rarity:contains(' + this.value + ')').parent().show()
 	).keyup()
 
 $ ->
@@ -28,6 +26,9 @@ $ ->
 			$('#card_list tbody tr').show()
 		else
 			$('#card_list tbody tr').hide()
-			$('.col_rarity:contains(' + $('#card_rarity option:selected').text() + ')').parent().show()
+			$('.col_rarity:contains(' + $('#card_rarity option:selected').text() + ')').each ->
+				if $(this).text() is $('#card_rarity option:selected').text()
+					$(this).parent().show()
+				return
 	).change()
 

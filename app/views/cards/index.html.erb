@@ -16,7 +16,7 @@
 			<th class="col_number"><%= text_field :card, :number, class: 'search' %></th>
 			<th class="col_image"></th>
 			<th class="col_name"><%= text_field :card, :name, class: 'search' %></th>
-			<th class="col_rarity"><%= select :card, :rarity, [["-", "None"], ["R", "R"], ["R+", "R+"], ["SR", "SR"], ["SR+", "SR+"], ["SSR", "SSR"], ["SSR+", "SSR+"]], {}, { class: "search" } %></th>
+			<th class="col_rarity"><%= select :card, :rarity, [["-", "None"], ["N", "N"], ["N＋", "N+"], ["R", "R"], ["R＋", "R+"], ["SR", "SR"], ["SR＋", "SR+"], ["SSR", "SSR"], ["SSR＋", "SSR+"]], {}, { class: "search" } %></th>
 			<th class="col_attr"><%= select :card, :attr, [["-", "None"], ["キュート", "Cute"], ["クール", "Cool"], ["パッション", "Passion"]], {}, { class: "search" } %></th>
 			<th class="col_own"><%= select :card, :own, [["-", "None"], ["Yes", "Yes"], ["No", "No"]], {}, { class: 'search' } %></th>
 			<th class="col_edit"></th>

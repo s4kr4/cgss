@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221162043) do
+ActiveRecord::Schema.define(version: 20160301194809) do
 
   create_table "cards", force: :cascade do |t|
     t.integer  "number"
     t.string   "image"
     t.string   "name"
     t.string   "rarity"
-    t.string   "attr"
-    t.boolean  "own"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "attr",       default: "None"
+    t.boolean  "own",        default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end
