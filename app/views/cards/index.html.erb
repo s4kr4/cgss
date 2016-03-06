@@ -1,6 +1,11 @@
 <h1>Hello, Cinderella Girls!</h1>
 
 <%= link_to "[New Card]", new_card_path %>
+<% if @cards.count == @cards.where(own: true).count %>
+	<p>Complete!!</p>
+<% else %>
+	<p>No complete(<%= @cards.where(own: true).count %> / <%= @cards.count %>)</p>
+<% end %>
 <table class="table table-scrollable" id="card_list">
 	<thead>
 		<tr>
